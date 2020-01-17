@@ -1,0 +1,25 @@
+<div class="root">
+    <div class="content">
+      <div class="content-head">
+        <img src="../../assets/img/icons8-question-mark-100.png" width="40" height="40">
+        <img src="../../assets/img/icons8-search-64.png" width="40" height="40" (click)="showModal()">
+      </div>
+      <div class="content-data">
+        <div>
+          <h1>{{currentDayInfo.temp | number}}&#176;</h1>
+          <h4>{{currentDayInfo.weatherMain}}</h4>
+        </div>
+        <div>
+          <img src="http://openweathermap.org/img/wn/{{currentDayInfo.icon}}@2x.png" alt="">
+        </div>
+          
+      </div>
+    </div>
+    <div></div>
+    <div class="content-body">
+        <app-day-item *ngFor="let element of daysInfo" [dayElement]="element"></app-day-item>
+    </div>
+  </div>
+  <app-search-model  [style.display]="state" (stateChange)="showModal($event)"></app-search-model>
+
+  
