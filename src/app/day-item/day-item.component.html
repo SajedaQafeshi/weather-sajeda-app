@@ -7,7 +7,7 @@
     <div class="day-temp">
         <h1>{{dayElement.main.temp - 273.15 | number:0}} &#176;</h1>
     </div>
-    <div class="day-temp-icon">
-        <img src="http://openweathermap.org/img/wn/{{dayElement.weather[0].icon}}@2x.png" >
+    <div class="day-temp-icon" [style.background-color] = "colorItem[index]">
+        <img src="http://openweathermap.org/img/wn/{{dayElement.weather[0].icon}}@2x.png"  >
     </div>
 </div>

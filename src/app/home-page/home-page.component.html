@@ -1,7 +1,9 @@
 <div class="root">
     <div class="content">
       <div class="content-head">
-        <img src="../../assets/img/icons8-question-mark-100.png" width="40" height="40">
+        <a routerLink="/dataInfo">
+          <img src="../../assets/img/icons8-question-mark-100.png" width="40" height="40">
+        </a>
         <img src="../../assets/img/icons8-search-64.png" width="40" height="40" (click)="showModal()">
       </div>
       <div class="content-data">
@@ -17,7 +19,7 @@
     </div>
     <div></div>
     <div class="content-body">
-        <app-day-item *ngFor="let element of daysInfo" [dayElement]="element"></app-day-item>
+        <app-day-item *ngFor="let element of daysInfo; let n = index" [dayElement]="element" [index]="n"></app-day-item>
     </div>
   </div>
   <app-search-model  [style.display]="state" (stateChange)="showModal($event)"></app-search-model>
