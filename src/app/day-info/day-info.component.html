@@ -1,26 +1,38 @@
 <div class="root">
     <div class="header-info">
         <div>
-            <h1></h1>
-            <h2></h2>
+            <h1>{{info.main.temp }}&#176;</h1>
+            <h2>{{info.weather[0].main}}</h2>
+            <h3>{{info.weather[0].description}}</h3>
         </div>
         <div>
-            <img src="" alt="">
+            <img src="http://openweathermap.org/img/wn/{{info.weather[0].icon}}@2x.png" alt="">
         </div>
     </div>
     <div class="date-info">
-        <h3></h3>
-        <h1></h1>
+        <h3>{{info.dt | date}}</h3>
+        <h1>{{info.sys.country}}, {{info.name}}</h1>
     </div>
     <div class="weather-info">
         <div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">
+                Wind
+                <h4>{{info.wind.speed}}</h4>
+            </div>
+            <div class="item">
+                Humidity
+                <h4>{{info.main.humidity}}</h4>
+            </div>
         </div>
         <div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <div class="item">
+                Temp Max
+                <h4>{{info.main.temp_max}}&#176;</h4>
+            </div>
+            <div class="item">
+                Visibility
+                <h4>{{info.visibility}}</h4>
+            </div>
         </div>
     </div>
-    <div class="tomorrow-bar"></div>
 </div>

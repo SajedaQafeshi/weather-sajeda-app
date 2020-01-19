@@ -24,7 +24,10 @@ export class DayInfoComponent implements OnInit {
           lon:this.longitude
         }).subscribe(data => {
             this.info=data; 
-            console.log(data);  
+            console.log(data);
+            this.info['main']['temp'] = Math.floor(this.info.main.temp - 273.15);
+            this.info['main']['temp_max'] = Math.floor(this.info.main.temp_max - 273.15);
+            this.info.dt = new Date(this.info.dt);
           });
       });
       } else {
