@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { DayItemComponent } from './day-item/day-item.component';
 import { DayInfoComponent } from './day-info/day-info.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -15,8 +16,12 @@ const routes: Routes = [
     component: DayInfoComponent
   },
   {
-    path:"**",
-    component: HomePageComponent
+    path:'home',
+    component:HomePageComponent
+  },
+  {
+    path:'**',
+    component: LoginComponent
   }
 ];
 

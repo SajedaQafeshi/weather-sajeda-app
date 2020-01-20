@@ -1,0 +1,126 @@
+.root {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .login-bar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        h1 {
+            background: -webkit-linear-gradient(left,#6008a5, #2ca3f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+            font-size: 3em;
+            font-family: Rubik;
+        }
+    }
+
+    .create-account-bar {
+
+        font-family: Rubik;
+        font-size: 14px;
+        a {
+            color: #e4403d;
+        }
+    }
+
+    form {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        height: 40%;
+
+        div {
+            width: 100%;
+            input[type=email] ,input[type=password]{
+                border: none;
+                border-bottom: 2px solid #ececec;
+                width: 80%;
+                font-size: 16px;
+                margin-top: 10px;
+                padding-left: 10px;
+            }
+              
+        }
+        
+        .remember-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 10px;
+
+            label {
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            input[type=checkbox].css-checkbox {
+                position: absolute; 
+                overflow: hidden; 
+                clip: rect(0 0 0 0); 
+                height:1px; 
+                width:1px; 
+                margin:-1px; 
+                padding:0;
+                border:0;
+            }
+            input[type=checkbox].css-checkbox + label.css-label {
+                padding-left:20px;
+                height:15px; 
+                display:inline-block;
+                line-height:15px;
+                background-repeat:no-repeat;
+                background-position: 0 0;
+                font-size:15px;
+                vertical-align:middle;
+                cursor:pointer;
+    
+            }
+            
+                    
+            input[type=checkbox].css-checkbox:checked + label.css-label {
+                background-position: 0 -15px;
+            }
+    
+            .css-label{
+                background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+            }
+    
+            .lite-green-check{background-image:url(http://csscheckbox.com/checkboxes/lite-green-check.png);}    
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            button {
+                background-color: #1669d3;
+                border: none;
+                width: 60%;
+                height: 50px;
+                color: white;
+                border-radius: 27px;
+                font-size: 18px;
+                font-weight: 500;
+                font-family: Rubik;
+                box-shadow: 0px 6px 16px #5ea5eb;
+            }
+        }
+    }
+}
+
+:host {
+    display: flex;
+    justify-content: center; 
+    height: 100%;
+}

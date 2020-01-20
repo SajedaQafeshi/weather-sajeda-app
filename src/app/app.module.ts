@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SearchModelComponent } from './search-model/search-model.component';
 import { DayInfoComponent } from './day-info/day-info.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DayInfoComponent } from './day-info/day-info.component';
     HomePageComponent,
     DayItemComponent,
     SearchModelComponent,
-    DayInfoComponent
+    DayInfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
