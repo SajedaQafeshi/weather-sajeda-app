@@ -12,21 +12,21 @@ import { DayInfoComponent } from './day-info/day-info.component';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    DayItemComponent,
-    SearchModelComponent,
-    DayInfoComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HomePageComponent,
+		DayItemComponent,
+		SearchModelComponent,
+		DayInfoComponent,
+		LoginComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		HttpClientModule,
+		FormsModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
