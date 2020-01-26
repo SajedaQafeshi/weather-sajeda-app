@@ -10,10 +10,13 @@
             <div>
                 <input type="email" #email="ngModel" required pattern="*@psue.edu?$" maxlength="180" name="email" placeholder="Your Email" ngModel>
             </div>
+<<<<<<< HEAD
             {{email.className}}
             <div *ngIf="email.errors?.pattern">
                 your pattern must end @puse.edu
             </div>
+=======
+>>>>>>> 6683b7f84a4502ff28de118fca70e981791365da
             <div>
                 <input type="password" required maxlength="12" minlength="6" name="password" placeholder="Password" ngModel>
             </div>

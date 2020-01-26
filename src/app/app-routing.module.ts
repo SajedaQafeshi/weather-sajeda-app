@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { DayItemComponent } from './day-item/day-item.component';
 import { DayInfoComponent } from './day-info/day-info.component';
 import { LoginComponent } from './login/login.component';
+import { SearchModelComponent } from './search-model/search-model.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path:'home',
     component:HomePageComponent
+  },
+  {
+	  path:'search',
+	  component:SearchModelComponent
   },
   {
     path:'**',
