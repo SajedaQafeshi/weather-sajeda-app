@@ -8,9 +8,10 @@
     <form #loginForm="ngForm" (ngSubmit)="functionName">
         <div>
             <div>
-                <input type="email" required pattern=".*@psue.edu?$" maxlength="180" name="email" placeholder="Your Email" ngModel>
+                <input type="email" #email="ngModel" required pattern="*@psue.edu?$" maxlength="180" name="email" placeholder="Your Email" ngModel>
             </div>
-            <div *ngIf="email.$error?.pattern && email.touched">
+            {{email.className}}
+            <div *ngIf="email.errors?.pattern">
                 your pattern must end @puse.edu
             </div>
             <div>
@@ -30,5 +31,4 @@
             <button type="submit">LOGIN</button>
         </div>
     </form>
-    <div class="style-bar"></div>
 </div>
