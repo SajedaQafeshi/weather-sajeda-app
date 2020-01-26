@@ -1,77 +1,18 @@
 <div class="root-model" [style.display]="state">
     <div class="main-model">
-        <div class="close-model" (click)="close()">
-            <span>&times;</span>
-        </div>
         <div class="body-model">
             <div class="search-bar">
                 <i><h4>Search</h4></i>
                 <div class="input-bar">
-                    <input type="search" name="search" placeholder="Search">
+                    <input type="search" name="cityFiltter" placeholder="Search" #cityFiltter (input)="updateCriteria(cityFiltter.value)"> 
                     <img src="../../assets/img/icons8-search-32.png" alt="">
                 </div>
             </div>
-            <div class="result">
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
+            <div class="result" [@filterAnimation]="">
+                <div class="list-item" *ngFor="let item of listCity" >
+                    <span class="badge"></span>
+                    <span >{{item}}</span>
                 </div> 
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div> 
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div> 
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div>
-                <div class="list-item">
-                    hebron
-                </div> 
-                <div class="list-item">
-                    hebron
-                </div>  
             </div>
         </div>
     </div>

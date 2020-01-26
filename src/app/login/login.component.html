@@ -10,9 +10,6 @@
             <div>
                 <input type="email" required pattern=".*@psue.edu?$" maxlength="180" name="email" placeholder="Your Email" ngModel>
             </div>
-            <div *ngIf="email.$error?.pattern && email.touched">
-                your pattern must end @puse.edu
-            </div>
             <div>
                 <input type="password" required maxlength="12" minlength="6" name="password" placeholder="Password" ngModel>
             </div>
@@ -30,5 +27,4 @@
             <button type="submit">LOGIN</button>
         </div>
     </form>
-    <div class="style-bar"></div>
 </div>
