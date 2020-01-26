@@ -38,45 +38,47 @@ import {
 export class SearchModelComponent implements OnInit {
 
   @Input() state:string;
-  heroTotal = -1;
 
-  listCity = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria", "Allentown",
-   "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley",
-    "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City",
-     "Augusta", "Aurora", "Austin",  "Boston", "Boulder", "Bradenton", "Bremerton",
-       "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge",
-        "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", 
-        "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista",
-         "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", 
-         "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi",
-          "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton",
-           "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey",
-                "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Lancaster", "Lansing", 
-                "Laredo", "Las Cruces", "Port St. Lucie", "Portland", "Portsmouth"
-                       , "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda",
-                        "Racine", "Raleigh", 
-                       "Rancho Cucamonga",
-                        "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County",];
-
+  listCity = [
+    "Abasan al-Kabira"	,
+    "Abu Dis",
+    "Bani Na'im",
+    "Bani Suheila"	,
+    "Beit Hanoun"	,
+    "Beit Jala"	,
+    "Beit Lahia"	,
+    "Beit Sahour",
+    "Beit Ummar",
+    "Beitunia"	,
+    "Bethlehem" ,
+    "al-Bireh"	,
+    "Deir al-Balah"	,
+    "ad-Dhahiriya"	,
+    "Dura"	,
+    "Gaza City" ,
+    "Halhul"	,
+    "Hebron",
+    "Idhna"	,
+    "Jabalia"	,
+    "Jenin"	,
+    "Jericho" ,
+    "Khan Yunis",
+    "Nablus",
+    "Qabatiya",
+    "Rafah"	,
+    "Ramallah"	,
+    "Sa'ir"	,
+    "as-Samu"	,
+    "Surif"	,
+    "Tubas",
+    "Tulkarm",
+    "Ya'bad"	,
+    "al-Yamun"	,
+    "Yatta"	,
+    "az-Zawayda"	]
   constructor() { 
   }
 
   ngOnInit() {
-  }
-  
-  updateCriteria(cityFiltter: string) {
-	cityFiltter = cityFiltter ? cityFiltter.trim() : '';
-	this.listCity = this.listCity.filter(item => item.toLowerCase().includes(cityFiltter.toLowerCase()));
-	const newTotal = this.listCity.length;
-	if (this.heroTotal !== newTotal) {
-		this.heroTotal = newTotal;
-	  } else if (!cityFiltter) {
-		this.heroTotal = -1;
-	  }
-  }
-  isOpen = true;
-
-  toggle() {
-    this.isOpen = !this.isOpen;
   }
 }

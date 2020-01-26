@@ -10,8 +10,7 @@
             </div>
             <div class="result" [@filterAnimation]="">
                 <div class="list-item" *ngFor="let item of listCity" >
-                    <span class="badge"></span>
-                    <span >{{item}}</span>
+                    <a routerLink="/info/city/{{item}}"> {{item}}</a>
                 </div> 
             </div>
         </div>

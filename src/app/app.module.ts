@@ -12,6 +12,7 @@ import { DayInfoComponent } from './day-info/day-info.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchFilterPipe } from "./search-model/search-filter.pipe";
+import { CityInfoComponent } from './city-info/city-info.component';
 
 @NgModule({
 	declarations: [
@@ -21,7 +22,8 @@ import { SearchFilterPipe } from "./search-model/search-filter.pipe";
 		SearchModelComponent,
 		DayInfoComponent,
 		LoginComponent,
-		SearchFilterPipe
+		SearchFilterPipe,
+		CityInfoComponent
 	],
 	imports: [
 		BrowserModule,
