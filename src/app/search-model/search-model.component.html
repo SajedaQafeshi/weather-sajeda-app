@@ -4,12 +4,12 @@
             <div class="search-bar">
                 <i><h4>Search</h4></i>
                 <div class="input-bar">
-                    <input type="search" name="cityFiltter" placeholder="Search" #cityFiltter (input)="updateCriteria(cityFiltter.value)"> 
+                    <input type="search" name="cityFiltter" placeholder="Search" [(ngModel)]="cityFiltter"> 
                     <img src="../../assets/img/icons8-search-32.png" alt="">
                 </div>
             </div>
             <div class="result" [@filterAnimation]="">
-                <div class="list-item" *ngFor="let item of listCity" >
+                <div class="list-item" *ngFor="let item of listCity | searchFilter:cityFiltter" >
                     <a routerLink="/info/city/{{item}}"> {{item}}</a>
                 </div> 
             </div>

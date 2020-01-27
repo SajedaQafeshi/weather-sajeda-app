@@ -30,6 +30,7 @@ export class HomePageComponent implements OnInit {
       console.log(this.currentDayInfo);
       this.currentDay(data['list'][0],data['city']['name']);
       this.daysInfo = data['list'].filter(day => {
+        day.main.temp= Math.floor(day.main.temp - 273.15);
         return day.dt_txt.endsWith("15:00:00");
       });
       this.daysInfo.pop();
