@@ -10,6 +10,10 @@ import { CityInfoComponent } from './city-info/city-info.component';
 
 const routes: Routes = [
 	{
+		path:'',
+		component:LoginComponent
+	},
+	{
 		path: 'day',
 		component: DayItemComponent
 	},

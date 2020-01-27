@@ -5,16 +5,34 @@
     <div class="create-account-bar">
         <h4>Don't have an account? <a>create your account</a></h4>
     </div>
-    <form #loginForm="ngForm" (ngSubmit)="functionName">
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
         <div>
             <div>
-                <input type="email" #email="ngModel" required pattern=".*@pseu.edu?$" maxlength="180" name="email" placeholder="Your Email" ngModel>
+                <input type="email" #email="ngModel" [class.error-input]="email.invalid && email.touched"
+                 required pattern=".*@pseu.edu?$" maxlength="180" name="email" placeholder="Your Email" ngModel>
             </div>
-            <div *ngIf="email.errors?.pattern">
-                your pattern must end @pseu.edu
+            <div *ngIf="email.errors && (email.invalid || email.touched)">
+                <small class="error" *ngIf="email.errors?.pattern">
+                    your pattern must end @pseu.edu
+                </small>
+                <small class="error" *ngIf="email.errors?.required">
+                    Email is required
+                </small>
             </div>
             <div>
-                <input type="password" required maxlength="12" minlength="6" name="password" placeholder="Password" ngModel>
+                <input type="password" #password="ngModel" [class.error-input]="password.invalid && password.touched"
+                 required maxlength="12" minlength="6" name="password" placeholder="Password" ngModel>
+            </div>
+            <div *ngIf="password.errors && (password.invalid || password.touched)">
+                <small class="error" *ngIf="password.errors?.minlength">
+                    min Length
+                </small>
+                <small class="error" *ngIf="password.errors?.maxlength">
+                    maX Length
+                </small>
+                <small class="error" *ngIf="password.errors?.required">
+                    Password is required
+                </small>
             </div>
             <div class="remember-bar">
                 <div>
@@ -27,7 +45,7 @@
             </div>
         </div>
         <div  class="btn">
-            <button type="submit">LOGIN</button>
+            <button type="submit" [disabled]="loginForm.form.invalid">LOGIN</button>
         </div>
     </form>
 </div>
